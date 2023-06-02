@@ -23,3 +23,20 @@ let words = ['hello', 'world', 'this', 'is', 'great'];
 function smash (words) {
     return words.join(' ')
 };
+
+// Reversed sequence
+
+const n = 5;
+
+const reverseSeq = n => {
+    const arr = [];
+
+
+    for (let i = n; i <= n; i--) {
+        arr.push(i);
+        if(i == 1) {
+            break;
+        }
+    }
+    return arr
+};
