@@ -8,8 +8,8 @@ const greet = () => {
 
 let bool = 0;
 
-function boolToWord( bool ){
-    if(bool == true) {
+function boolToWord(bool) {
+    if (bool == true) {
         return "Yes"
     } else {
         return "No"
@@ -20,7 +20,7 @@ function boolToWord( bool ){
 
 let words = ['hello', 'world', 'this', 'is', 'great'];
 
-function smash (words) {
+function smash(words) {
     return words.join(' ')
 };
 
@@ -34,9 +34,52 @@ const reverseSeq = n => {
 
     for (let i = n; i <= n; i--) {
         arr.push(i);
-        if(i == 1) {
+        if (i == 1) {
             break;
         }
     }
     return arr
 };
+
+// You Can't Code Under Pressure #1
+
+function doubleInteger(i) {
+    i *= 2;
+    return i;
+}
+
+// Beginner - Reduce but Grow
+
+const x = [1,2,3,4]
+
+function grow(x){
+    const arr = x.reduce((x, arr) => x * arr);
+    return arr
+}
+
+// Returning Strings
+
+let name = "Andrey";
+
+function greet(name){
+    return `Hello, ${name} how are you doing today?`
+}
+
+// How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+    const sum = classPoints.reduce((acc, number) => acc + number, 0);
+    const length = classPoints.length;
+    const average = sum / length;
+    if(yourPoints > average){
+        return true
+    } else {
+        return false
+    }
+};
+
+// A Needle in the Haystack
+
+function findNeedle(haystack) {
+    return "found the needle at position " + haystack.findIndex(i => i == "needle")
+}
