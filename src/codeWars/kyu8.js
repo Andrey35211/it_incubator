@@ -76,7 +76,7 @@ function betterThanAverage(classPoints, yourPoints) {
     } else {
         return false
     }
-}
+};
 
 // A Needle in the Haystack
 
