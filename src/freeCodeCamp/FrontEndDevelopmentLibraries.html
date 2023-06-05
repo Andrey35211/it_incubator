@@ -253,3 +253,36 @@
 
 <!--Use @for to Create a Sass Loop-->
 
+<style type='text/scss'>
+  @for $j from 1 through 6 {
+    .text-#{$j} { font-size: 15px * $j; }
+  }
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+
+<!--Use @each to Map Over Items in a List-->
+
+<style type='text/scss'>
+  $colors: (color1: blue, color2: black, color3: red);
+
+  @each $key, $color in $colors {
+    .#{$color}-bg {background-color: $color;}
+  }
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>
+
+<!--Apply a Style Until a Condition is Met with @while-->
+
