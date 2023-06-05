@@ -83,3 +83,10 @@ function betterThanAverage(classPoints, yourPoints) {
 function findNeedle(haystack) {
     return "found the needle at position " + haystack.findIndex(i => i == "needle")
 }
+
+// Convert a string to an array
+
+function stringToArray(string){
+    return string.split(' ');
+}
+
