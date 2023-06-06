@@ -96,3 +96,10 @@ function numberToString(num) {
     return String(num)
 }
 
+// Counting sheep...
+
+function countSheeps(arrayOfSheep) {
+    arr =  arrayOfSheep.filter(el => el === true);
+    return arr.length
+}
+
