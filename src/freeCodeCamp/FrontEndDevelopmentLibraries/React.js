@@ -78,3 +78,27 @@ class MyComponent extends React.Component {
         );
     }
 };
+
+// Jenny's secret message
+
+function greet(name){
+    if(name === "Johnny"){
+        return "Hello, my love!";
+    } else {
+        return "Hello, " + name + "!";
+    }
+}
+
+// Array plus array
+
+function arrayPlusArray(arr1, arr2) {
+
+    const add1 = arr1 => arr1.reduce((a, b) => a + b, 0);
+    const add2 = arr2 => arr2.reduce((a, b) => a + b, 0);
+
+    let count1 = add1(arr1);
+    let count2 = add2(arr2);
+    let sum = count1 + count2
+
+    return sum
+}
