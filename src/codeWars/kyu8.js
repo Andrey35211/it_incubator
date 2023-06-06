@@ -103,3 +103,6 @@ function countSheeps(arrayOfSheep) {
     return arr.length
 }
 
+// Categorize New Member
+
+
