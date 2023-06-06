@@ -35,3 +35,32 @@ const JSX = (
 );
 
 ReactDOM.render(JSX, document.getElementById("challenge-node"));
+
+// Define an HTML Class in JSX
+
+const JSX = (
+    <div className="myDiv">
+        <h1>Add a class to this div</h1>
+    </div>
+);
+
+// Learn About Self-Closing JSX Tags
+
+const JSX = (
+    <div>
+        <h2>Welcome to React!</h2> <br />
+        <p>Be sure to close all tags!</p>
+        <hr />
+    </div>
+);
+
+// Create a Stateless Functional Component
+
+const MyComponent = function() {
+    return (
+        <div>
+            String
+        </div>
+    );
+
+}
