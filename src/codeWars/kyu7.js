@@ -20,3 +20,22 @@ function addBinary(a,b) {
     }
     return binary;
 }
+
+// Friend or Foe?
+
+function friend(friends){
+    return friends.filter(word => word.length === 4);
+}
+
+// Reverse words
+
+function reverseWords(str) {
+    let arr = str.split(" ");
+    let strReverse = "";
+
+    for (let i = 0; i < arr.length; i++) {
+        strReverse += arr[i].split("").reverse().join("") + " ";
+    }
+
+    return strReverse.trim();
+}

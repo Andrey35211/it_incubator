@@ -135,4 +135,42 @@ function booleanToString(b){
     return String(b)
 }
 
+// Enumerable Magic #20 - Cascading Subsets
+
+function eachCons(array, n) {
+    const r =[]
+    for(let i = 0; i<= array.length - n; i++){
+        const chunk = []
+        for (let j = i; j < i + n; j++) {
+            chunk.push(array[j])
+        }
+        r.push(chunk)
+    }
+
+    return r;
+}
+
+// What is between?
+
+function between(a, b) {
+    const arr = []
+    for(let i = a; i <= b; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// Freudian translator
+
+function toFreud(string) {
+    return !string ? '' : string.split(' ').map(el => "sex").join(' ')
+}
+
+// Volume of a Cuboid
+
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height;
+    }
+}
 
