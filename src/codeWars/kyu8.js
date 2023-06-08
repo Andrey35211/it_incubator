@@ -182,3 +182,10 @@ function howMuchWater(water, load, clothes){
     else return +(water * 1.1 ** (clothes - load)).toFixed(2)
 }
 
+// Remove duplicates from list
+
+function distinct(a) {
+    const uniqueNumbers = new Set(a)
+    return Array.from(uniqueNumbers)
+}
+

@@ -51,3 +51,17 @@ function arraySum(arr) {
     }
     return sum;
 }
+
+// Write shortest function to calculate Average number of Array
+
+const avg = a => a.reduce((a,b) => a + b) / a.length;
+
+// sPoNgEbOb MeMe
+
+function spongeMeme(sentence) {
+    let res = '';
+    for(let i = 0; i < sentence.length; i++){
+        res += ( i % 2 ) ? sentence[i].toLowerCase() : sentence[i].toUpperCase()
+    }
+    return res
+}
