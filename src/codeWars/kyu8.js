@@ -309,3 +309,19 @@ function points(games) {
     })
     return count
 }
+
+// Find out whether the shape is a cube
+
+var cubeChecker = function(volume, side){
+    if(volume <= 0 || side<= 0){
+        return false
+    }
+    return Math.cbrt(volume) === side;
+};
+
+// Will there be enough space?
+
+function enough(cap, on, wait) {
+    const p = on + wait - cap;
+    return p < 0 ? 0 : p
+}
