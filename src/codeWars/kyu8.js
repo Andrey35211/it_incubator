@@ -194,3 +194,9 @@ function distinct(a) {
 function typeOfSum(a, b) {
     return typeof(a + b)
 }
+
+// Count Odd Numbers below n
+
+function oddCount(n){
+    return Math.floor(n/2)
+}

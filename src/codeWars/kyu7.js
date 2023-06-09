@@ -65,3 +65,9 @@ function spongeMeme(sentence) {
     }
     return res
 }
+
+// String repeat
+
+function repeatStr (n, s) {
+    return s.repeat(n);
+}
