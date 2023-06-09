@@ -328,3 +328,31 @@ function enough(cap, on, wait) {
 
 // For Twins: 1. Types
 
+function typeValidation(variable, type){
+    return typeof(variable) === type
+}
+
+// Beginner Series #1 School Paperwork
+
+function paperwork(n, m) {
+    if(n<0 || m < 0) return 0
+    return n * m
+}
+
+// isReallyNaN
+
+const isReallyNaN = (val) => {
+    return Number.isNaN(val)
+};
+
+// Sum The Strings
+
+function sumStr(a,b) {
+    return (Number(a) + Number(b)).toString()
+}
+
+// Enumerable Magic #25 - Take the First N Elements
+
+function take(arr, n) {
+    return arr.slice(0,  n)
+}
