@@ -50,9 +50,9 @@ function doubleInteger(i) {
 
 // Beginner - Reduce but Grow
 
-const x = [1,2,3,4]
+const x = [1, 2, 3, 4]
 
-function grow(x){
+function grow(x) {
     const arr = x.reduce((x, arr) => x * arr);
     return arr
 }
@@ -61,7 +61,7 @@ function grow(x){
 
 let name = "Andrey";
 
-function greet(name){
+function greet(name) {
     return `Hello, ${name} how are you doing today?`
 }
 
@@ -71,7 +71,7 @@ function betterThanAverage(classPoints, yourPoints) {
     const sum = classPoints.reduce((acc, number) => acc + number, 0);
     const length = classPoints.length;
     const average = sum / length;
-    if(yourPoints > average){
+    if (yourPoints > average) {
         return true
     } else {
         return false
@@ -86,7 +86,7 @@ function findNeedle(haystack) {
 
 // Convert a string to an array
 
-function stringToArray(string){
+function stringToArray(string) {
     return string.split(' ');
 }
 
@@ -99,7 +99,7 @@ function numberToString(num) {
 // Counting sheep...
 
 function countSheeps(arrayOfSheep) {
-    arr =  arrayOfSheep.filter(el => el === true);
+    arr = arrayOfSheep.filter(el => el === true);
     return arr.length
 }
 
@@ -107,8 +107,8 @@ function countSheeps(arrayOfSheep) {
 
 // Jenny's secret message
 
-function greet(name){
-    if(name === "Johnny"){
+function greet(name) {
+    if (name === "Johnny") {
         return "Hello, my love!";
     } else {
         return "Hello, " + name + "!";
@@ -131,15 +131,15 @@ function arrayPlusArray(arr1, arr2) {
 
 // Convert a Boolean to a String
 
-function booleanToString(b){
+function booleanToString(b) {
     return String(b)
 }
 
 // Enumerable Magic #20 - Cascading Subsets
 
 function eachCons(array, n) {
-    const r =[]
-    for(let i = 0; i<= array.length - n; i++){
+    const r = []
+    for (let i = 0; i <= array.length - n; i++) {
         const chunk = []
         for (let j = i; j < i + n; j++) {
             chunk.push(array[j])
@@ -154,7 +154,7 @@ function eachCons(array, n) {
 
 function between(a, b) {
     const arr = []
-    for(let i = a; i <= b; i++) {
+    for (let i = a; i <= b; i++) {
         arr.push(i);
     }
     return arr;
@@ -176,8 +176,8 @@ class Kata {
 
 // How much water do I need?
 
-function howMuchWater(water, load, clothes){
-    if(clothes > load * 2) return 'Too much clothes';
+function howMuchWater(water, load, clothes) {
+    if (clothes > load * 2) return 'Too much clothes';
     else if (load > clothes) return 'Not enough clothes';
     else return +(water * 1.1 ** (clothes - load)).toFixed(2)
 }
@@ -192,13 +192,13 @@ function distinct(a) {
 // Type of sum
 
 function typeOfSum(a, b) {
-    return typeof(a + b)
+    return typeof (a + b)
 }
 
 // Count Odd Numbers below n
 
-function oddCount(n){
-    return Math.floor(n/2)
+function oddCount(n) {
+    return Math.floor(n / 2)
 }
 
 // Find the smallest integer in the array
@@ -211,18 +211,18 @@ class SmallestIntegerFinder {
 
 // Get the mean of an array
 
-function getAverage(marks){
+function getAverage(marks) {
     return Math.floor(marks.reduce((acc, cur) => acc + cur) / marks.length);
 }
 
 // Student's Final Grade
 
-function finalGrade (exam, projects) {
-    if( exam > 90 || projects > 10) {
+function finalGrade(exam, projects) {
+    if (exam > 90 || projects > 10) {
         return 100;
-    } else if  ( exam > 75 && projects >=5 ) {
+    } else if (exam > 75 && projects >= 5) {
         return 90;
-    } else if ( exam > 50 && projects >= 2){
+    } else if (exam > 50 && projects >= 2) {
         return 75;
     } else {
         return 0
@@ -231,15 +231,16 @@ function finalGrade (exam, projects) {
 
 // Convert to Binary
 
-function toBinary(n){
+function toBinary(n) {
     return Number(n.toString(2));
 }
 
 // Sleigh Authentication
 
-function Sleigh() {}
+function Sleigh() {
+}
 
-Sleigh.prototype.authenticate = function(name, password) {
+Sleigh.prototype.authenticate = function (name, password) {
     return name === 'Santa Claus' && password === 'Ho Ho Ho!'
 };
 
@@ -252,5 +253,59 @@ function digitize(n) {
 // Difference of Volumes of Cuboids
 
 function findDifference(a, b) {
-    return Math.abs( (a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+    return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+}
+
+// Grasshopper - Personalized Message
+
+function greet(name, owner) {
+    if (name === owner) {
+        return 'Hello boss'
+    } else {
+        return 'Hello guest'
+    }
+}
+
+// Multiplication table for number
+
+function multiTable(number) {
+    let res = '';
+    for (let i = 1; i <= 10; i++) {
+        res += `${i} * ${number} = ${i * number}`
+        if (i < 10) {
+            res += '\n'
+        }
+    }
+    return res
+}
+
+// Sum of differences in array
+
+function sumOfDifferences(arr) {
+    const sorted = arr.sort((a, b) => b - a)
+    let sum = 0;
+    for (let i = 1; i < sorted.length; i++) {
+        sum += sorted[i - 1] - sorted[i]
+    }
+    return sum
+}
+
+// Enumerable Magic #2 - True for Any?
+
+function any(arr, fun){
+    return arr.some(fun)
+}
+
+// Total amount of points
+
+function points(games) {
+    let count = 0;
+    games.forEach ( item => {
+        if(item[0] > item[2]) {
+            count += 3
+        } else if(item[0] == item[2]) {
+            count += 1
+        }
+    })
+    return count
 }
