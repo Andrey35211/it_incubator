@@ -200,3 +200,11 @@ function typeOfSum(a, b) {
 function oddCount(n){
     return Math.floor(n/2)
 }
+
+// Find the smallest integer in the array
+
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min(...args)
+    }
+}
