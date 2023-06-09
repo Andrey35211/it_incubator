@@ -234,3 +234,23 @@ function finalGrade (exam, projects) {
 function toBinary(n){
     return Number(n.toString(2));
 }
+
+// Sleigh Authentication
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+    return name === 'Santa Claus' && password === 'Ho Ho Ho!'
+};
+
+// Convert number to reversed array of digits
+
+function digitize(n) {
+    return n.toString().split('').reverse().map(el => Number(el))
+}
+
+// Difference of Volumes of Cuboids
+
+function findDifference(a, b) {
+    return Math.abs( (a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+}
