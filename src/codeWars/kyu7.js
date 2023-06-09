@@ -71,3 +71,26 @@ function spongeMeme(sentence) {
 function repeatStr (n, s) {
     return s.repeat(n);
 }
+
+// Print a Rectangle Using Asterisks
+
+function getRectangleString(width, height) {
+    const rn = '\r\n'
+    const tb = '*'.repeat(width) + rn;
+    const center = (width > 1) ? ('*' + ' '.repeat(width - 2) + '*' + rn).repeat(height - 2) : '' ;
+    return height > 1 ? (tb + center + tb) : tb.repeat(height)
+}
+
+// Find the missing element between two arrays
+
+function findMissing(arr1, arr2) {
+    let index;
+    for (let i = 0; i < arr1.length; i++) {
+        index = arr2.indexOf(arr1[i])
+        if (  index > -1) {
+            arr2.splice(index, 1)
+        } else {
+            return arr1[i]
+        }
+    }
+}
