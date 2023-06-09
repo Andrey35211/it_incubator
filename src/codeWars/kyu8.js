@@ -356,3 +356,38 @@ function sumStr(a,b) {
 function take(arr, n) {
     return arr.slice(0,  n)
 }
+
+// Is he gonna survive?
+
+function hero(bullets, dragons){
+    return dragons * 2 <= bullets;
+}
+
+// Convert a String to a Number!
+
+const stringToNumber = function(str){
+    return Number(str);
+}
+
+// Find Maximum and Minimum Values of a List
+
+const min = function(list){
+
+    return Math.min(...list);
+}
+const max = function(list){
+
+    return Math.max(...list);
+}
+
+// To square(root) or not to square(root)
+
+function squareOrSquareRoot(array) {
+    return array.map(el => {
+        if(Number.isInteger(Math.sqrt(el))) {
+            return Math.sqrt(el)
+        } else {
+            return el ** 2;
+        };
+    });
+}
