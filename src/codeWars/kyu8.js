@@ -429,3 +429,9 @@ const rps = (p1, p2) => {
 function litres(time) {
     return Math.floor(time * 0.5);
 }
+
+// Is the string uppercase?
+
+String.prototype.isUpperCase = function() {
+    return this.toUpperCase() === this.toString();
+}
