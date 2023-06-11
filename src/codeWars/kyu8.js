@@ -391,3 +391,41 @@ function squareOrSquareRoot(array) {
         };
     });
 }
+
+// Sum without highest and lowest number
+
+function sumArray(array) {
+    if(!array || array.length < 2) return 0;
+    let min = array[0];
+    let max = array[0];
+    let sum = 0;
+    array.forEach(el => {
+        if(el < min) min = el;
+        if(el > max) max = el;
+        sum += el
+    })
+    return sum - min - max
+}
+
+// Rock Paper Scissors!
+
+const rps = (p1, p2) => {
+    const getMsg = (n) => `Player ${n} won!`;
+
+    if(p1 === "scissors" && p2 === "paper") return getMsg(1);
+    if(p1 === "paper" && p2 === "scissors") return getMsg(2);
+
+    if(p1 === "paper" && p2 === 'rock') return getMsg(1);
+    if(p1 === 'rock' && p2 === "paper") return getMsg(2);
+
+    if(p1 === 'rock' && p2 === "scissors") return getMsg(1);
+    if(p1 === "scissors" && p2 === 'rock') return getMsg(2);
+
+    if(p1 === p2) return "Draw!"
+};
+
+// Keep Hydrated!
+
+function litres(time) {
+    return Math.floor(time * 0.5);
+}
