@@ -124,3 +124,10 @@ function SeriesSum(n)
     }
     return sum.toFixed(2);
 }
+
+// The Office IV - Find a Meeting Room
+
+function meeting(x){
+    const f = x.indexOf('O')
+    return f > -1 ? f : 'None available!'
+}
