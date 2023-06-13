@@ -94,3 +94,19 @@ function findMissing(arr1, arr2) {
         }
     }
 }
+
+// Flatten and sort an array
+
+
+
+function flattenAndSort(array) {
+    let res = [];
+    array.forEach(el => {
+        if(Number.isInteger(el)){
+            res.push(el)
+        } else if (Array.isArray(el)  && el.length > 0) {
+            res = [...res, ...el]
+        }
+    })
+    return res.sort((a,b) => a-b)
+}

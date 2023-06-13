@@ -435,3 +435,21 @@ function litres(time) {
 String.prototype.isUpperCase = function() {
     return this.toUpperCase() === this.toString();
 }
+
+// Count by X
+
+function countBy(x, n) {
+    let z = [];
+    let times = n;
+    for(let i = x; times > 0; i += x){
+        z.push(i)
+        times--
+    }
+    return z;
+}
+
+// Reversing Words in a String
+
+function reverse(string){
+    return string.split(' ').reverse().join(' ')
+}
