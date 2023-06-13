@@ -70,3 +70,22 @@ function likes(names) {
     if(names.length === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
     if(names.length > 3) return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
 }
+
+// The Office V - Find a Chair
+
+function meeting(x, need){
+    if(!need) return 'Game On';
+    const r = [];
+    let rest = need;
+
+    for (let i = 0; i < x.length; i++){
+        if(rest > 0){
+            let chair = x[i][1] - x[i][0].length;
+            r.push(chair > 0 ? (chair > rest ? rest : chair) : 0)
+            if(chair > 0) rest -= chair
+        } else {
+            return r;
+        }
+    }
+    return rest <= 0 ? r : 'Not enough!'
+}
