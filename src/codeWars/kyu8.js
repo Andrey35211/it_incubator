@@ -520,3 +520,30 @@ function exponent(a,b){
 function subt(a,b){
     return a -b
 }
+
+// Name on billboard
+
+function billboard(name, price = 30){
+    let r = 0;
+
+    for(let i = 0; i < name.length; i++){
+        r += price
+    }
+    return r
+}
+
+// Name Shuffler
+
+function nameShuffler(str){
+    return str.split(' ').reverse().join(' ')
+}
+
+// Short Long Short
+
+function solution(a, b){
+    if (a.length < b.length) {
+        return a + b + a
+    } else {
+        return b + a + b
+    }
+}
