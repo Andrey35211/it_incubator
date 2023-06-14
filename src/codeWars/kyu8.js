@@ -465,3 +465,58 @@ function setAlarm(employed, vacation){
 function reverseList(list) {
     return list.reverse()
 }
+
+// Define a card suit
+
+function defineSuit(card) {
+    return {
+        '♣' : 'clubs',
+        '♦' : 'diamonds',
+        '♥' : 'hearts',
+        '♠' : 'spades',
+    }[card[card.length - 1]]
+}
+
+// Plural
+
+function plural(n) {
+    if(n<1) return true
+    else if(n === 1) return false
+    else return true
+}
+
+// Check same case
+
+const isNotLetter = s => s === s.toUpperCase() && s === s.toLowerCase();
+const register = s => s === s.toUpperCase() ? 'U' : 'L';
+
+function sameCase(a, b){
+    if(isNotLetter(a) || isNotLetter(b)) return -1
+    return register(a) === register(b) ? 1  : 0;
+}
+
+// Fundamentals: Return
+
+function add(a,b){
+    return a + b
+}
+
+function divide(a,b){
+    return a / b
+}
+
+function multiply(a,b){
+    return a * b
+}
+
+function mod(a,b){
+    return a % b
+}
+
+function exponent(a,b){
+    return a ** b
+}
+
+function subt(a,b){
+    return a -b
+}
