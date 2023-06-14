@@ -141,3 +141,38 @@ function accum(s) {
     }
     return res
 }
+
+// Coprime Validator
+
+function isCoprime(x, y) {
+    const min = Math.min(x, y)
+
+    for(let i = 2; i <= min; i++){
+        if(!(x % i) && !(y % i)) return false
+    }
+    return true
+}
+
+// Find the vowels
+
+function vowelIndices(word){
+    const vowels = 'aeiouyAEIOUY';
+    const res =[];
+
+    for (let i = 0; i < word.length; i++) {
+        if(vowels.includes(word[i])) res.push(i + 1)
+    }
+
+    return res
+}
+
+// Extra Perfect Numbers (Special Numbers Series #7)
+
+function extraPerfect(n){
+    const res = [];
+
+    for (let i = 1; i <= n; i += 2) {
+        res.push(i)
+    }
+    return res
+}
