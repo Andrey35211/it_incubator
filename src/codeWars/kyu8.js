@@ -453,3 +453,15 @@ function countBy(x, n) {
 function reverse(string){
     return string.split(' ').reverse().join(' ')
 }
+
+// L1: Set Alarm
+
+function setAlarm(employed, vacation){
+    return employed && !vacation
+}
+
+// Reverse List Order
+
+function reverseList(list) {
+    return list.reverse()
+}
