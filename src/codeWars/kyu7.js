@@ -176,3 +176,23 @@ function extraPerfect(n){
     }
     return res
 }
+
+// The fusc function -- Part 1
+
+function fusc(n) {
+    if(n === 0) return 0;
+    if(n === 1) return 1;
+    if(n % 2){
+        return fusc(Math.floor(n/2)) + fusc(Math.ceil(n/2))
+    }
+    return fusc(n/2)
+}
+
+// Nice Array
+
+function isNice(arr){
+    if(!arr.length) return false
+    const voc = {}
+    arr.forEach(n => voc[n] = 1)
+    return arr.every(n => voc[ n - 1 ] || voc[ n + 1 ])
+}
