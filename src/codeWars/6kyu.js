@@ -119,3 +119,19 @@ function comp(array1, array2){
 
     return true
 }
+
+// The range() function
+
+function range(start, stop, step = 1) {
+    const args = Object.values(arguments)
+
+    if(args.length === 1 ) {
+        start = 0
+        stop = args[0]
+    }
+    const arr = [];
+    for(let i = start; i < stop; i += !step ? 1 : step) {
+        arr.push(!step ? start : i)
+    }
+    return arr
+}
