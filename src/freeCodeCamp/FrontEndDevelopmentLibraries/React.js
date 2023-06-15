@@ -318,3 +318,80 @@ class ShoppingCart extends React.Component {
         return <Items />
     }
 };
+
+// Access Props Using this.props
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+    render() {
+        return (
+            <div>
+                <Welcome name={"Andrey"}/>
+            </div>
+        );
+    }
+};
+
+class Welcome extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+    render() {
+        return (
+            <div>
+                <p>Hello, <strong>{this.props.name}</strong>!</p>
+            </div>
+        );
+    }
+};
+
+// Review Using Props with Stateless Functional Components
+
+class CampSite extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <Camper />
+            </div>
+        );
+    }
+};
+
+const Camper = (props) => {
+    return <p>{props.name}</p>
+};
+
+Camper.defaultProps = {
+    name: "CamperBot"
+};
+
+Camper.propTypes = {
+    name: PropTypes.string.isRequired
+};
+
+// Create a Stateful Component
+
+class StatefulComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            firstName: "Andrey"
+        }
+    }
+    render() {
+        return (
+            <div>
+                <h1>{this.state.firstName}</h1>
+            </div>
+        );
+    }
+};
+
+
