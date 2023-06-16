@@ -196,3 +196,24 @@ function isNice(arr){
     arr.forEach(n => voc[n] = 1)
     return arr.every(n => voc[ n - 1 ] || voc[ n + 1 ])
 }
+
+// Hëävÿ Mëtäl Ümläüts
+
+function heavyMetalUmlauts(boringText) {
+    let res = ''
+    const voc = {
+        A : 'Ä', E : 'Ë', I : 'Ï',
+        O : 'Ö', U : 'Ü', Y : 'Ÿ',
+        a : 'ä', e : 'ë', i : 'ï',
+        o : 'ö', u : 'ü', y : 'ÿ',
+    }
+    for(let i = 0; i < boringText.length; i++) {
+        if(voc[boringText[i]]) res += voc[boringText[i]];
+        else res += boringText[i]
+    }
+    return res;
+}
+
+// First-Class Function Factory
+
+const factory = x => arr => arr.map(el => el * x)
